@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+
+\title{How to Karte der Mathematik}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Graphviz öffnen}
+
+\begin{enumerate}
+    \item https://www.graphviz.org/download
+    \item Betriebssystem wählen
+    \item graphviz-2.38 runterladen
+    \item Ordner graphviz-2.38 $\rightarrow$ release $\rightarrow$ bin öffnen
+    \item gvedit.exe ausführen 
+\end{enumerate}
+
+
+\section{Beispielgraph}
+
+digraph Vorlesung \{
+\begin{tabbing}
+\=splines="spline"\hspace{3cm} \=//ermöglicht auch nicht gerade Pfeile\\
+\>overlap=false\>//Kanten gehen nicht durch Knoten\\ 
+\>start=4	\>//verschiedene Formen der Karte\\
+\>\>\\
+\end{tabbing}
+\begin{tabbing}
+\=Algebra\hspace{2cm}\= [color="royalblue4",fontsize=20.0, style=filled, fontcolor="white"]\\
+\>Algebra1\> [shape=box,label="Algebra 1"]    \\
+\>Darstellungstheorie \\
+\>Zahlentheorie \>		[shape=box]  \\
+\>algZT\>[label="Algebraische Zahlentheorie"] \\
+\>Topologie \>	[shape=box]  \\
+\>algTopo \>[shape=box, label="Algebraische Topologie"]\\
+\>homAlg \>[label="Homologische Algebra"] \\
+\>komAlg\>[label="Kommutative Algebra"]\\
+\>AlgGeo\>[label="Algebraische Geometrie"]\\
+\>Homotopietheorie\\
+\>LieAlg \>	[label="Lie Algebren"]\\
+\>	AlgGrp\>[label="Algebraische Gruppen"]  \\
+\end{tabbing}
+
+\begin{tabbing}
+\=Algebra $-$$>$ Algebra1 \hspace{3cm} \=[arrowhead=none,] \\
+\>Algebra1 $-$$>$ Darstellungstheorie \\
+\>Zahlentheorie $-$$>$ algZT \\
+\>Algebra $-$$>$ Zahlentheorie\>[arrowhead=none] \\
+\>Algebra1 $-$$>$ algZT \\
+\>Algebra1 $-$$>$ homAlg \\
+\>Algebra1 $-$$>$ AlgGeo \\
+\>Algebra1 $-$$>$ komAlg\\
+\>komAlg $-$$>$ algTopo \>    		[style=dotted] \\
+\>komAlg $-$$>$ Differentialtopologie    \>	[style=dotted] \\
+\>Algebra1 $-$$>$ Topologie     	\>	[style=dotted]\\ 
+\>algTopo $-$$>$ Homotopietheorie \\
+\>Topologie $-$$>$ algTopo \\
+\>Topologie $-$$>$ Differentialtopologie   \>  	[style=dotted] \\
+\>Topologie $-$$>$ AlgGeo     	\>	[style=dotted] \\
+\>AlgGeo $-$$>$ AlgGrp \\
+\>komAlg $-$$>$ AlgGeo \\
+\>Algebra1 $-$$>$ LieAlg \\
+\>homAlg $-$$>$ algTopo     	\>	[style=dotted] \\
+\>\}
+\end{tabbing}	
+\noindent
+
+\begin{minipage}{1.2 \textwidth}
+    \includegraphics[width=\textwidth]{HowtoKdM.pdf}
+\end{minipage}
+
+\section{Verwendungstipps}
+\begin{itemize}
+\item Mit "File"$\rightarrow$"New" und dann "File"$\rightarrow$"Save as" kann man Graphvizdateien erstellen, die Dateiendung ist ".gv".
+\item Mit F5 kann man sich die Karte darstellen lassen.
+\item Mit Shift+F5 kann man sich verschiedene Layouts aussuchen. Der voreingestellte Standard ist dot. Für Vorlesungsgraphen war neato am Besten.
+\item Man kann mit Shift+F5 den Graphen in verschiedenen Dateiformaten speichern und exportieren. Sinnvoll ist hierfür ".png", ".pdf" und ".svg".
+\item Im Code kann man durch die "start"-Variable einen zufälligen Startpunkt für die Karte setzen. Dieser Startpunkt kann einen großen Einfluss auf die Struktur und Lesbarkeit der Karte haben. Wir empfehlen das Ausprobieren verschiedener Werte, bis man mit dem Ergebnis zufrieden ist.
+\end{itemize}
+
+\section{Nützliche Links}
+
+\begin{itemize}
+\item Einführungsfolien:
+https://spline.de/static/talks/graphviz.pdf
+\item Verschiedene Knoten: https://www.graphviz.org/doc/info/shapes.html
+\item Verschiedene Farben: https://www.graphviz.org/doc/info/colors.html
+\item Graphattribute:
+https://graphviz.gitlab.io/\_pages/doc/info/attrs.html
+\item Neato Dokumentation:
+https://www.graphviz.org/pdf/neatoguide.pdf
+\item Wikipedia:
+https://de.wikipedia.org/wiki/Graphviz
+\end{itemize}
+
+\section{Offlineversion erstellen}
+    Exportiere Graphen als ".svg"-Datei, öffne diese in einem Bildbearbeitungsprogramm wie Inkscape und füge eine gewünschte Legende hinzu. Dann kann man eine ".pdf"-Datei ausgeben und ausdrucken.
+
+\section{Interaktive Version erstellen}
+Um die Karte interaktiv zu gestalten, kann man zu den einzelnen Knoten z.B Modulbeschreibungen oder Teilgraphen einfügen. Hierzu erstellt man zu jedem Knoten einen Link zur gewünschten Seite indem man hinter den benannten Knoten [URL="Link zur gewünschten Datei/ Seite"] setzt. Dies ist auch für Kanten möglich, wurde jedoch hier nicht genutzt. Weitere Beschreibungen folgen in "Onlineversion erstellen".\\
+
+\noindent
+digraph Vorlesung \{
+
+\begin{tabbing}
+\=splines="spline"\hspace{3cm} \=//ermöglicht auch nicht gerade Pfeile\\
+\>overlap=false\>//Kanten gehen nicht durch Knoten\\ 
+\>start=4	\>//verschiedene Formen der Karte\\
+\>\>\\
+\end{tabbing}
+
+\begin{tabbing}
+\=Algebra\hspace{2cm}\= [color="royalblue4",fontsize=20.0, style=filled, fontcolor="white",\\
+\>\>  URL="Algebra.html"]  \\
+\>Algebra1\> [shape=box,label="Algebra 1, URL="Algebra1.html"]\\
+\>Darstellungstheorie\> [URL="Darstellungstheorie.html"]\\
+\>Zahlentheorie \>		[shape=box, URL="Zahlentheorie.html"]  \\
+\>algZT\>[label="Algebraische Zahlentheorie", URL="algZT.html"] \\
+\>Topologie \>	[shape=box, URL="Topologie.html"]  \\
+\>algTopo \>[shape=box, label="Algebraische Topologie", URL="algTopo.html"]\\
+\>homAlg \>[label="Homologische Algebra", URL="homAlg.html"] \\
+\>komAlg\>[label="Kommutative Algebra", URL="komAlg.html"]\\
+\>AlgGeo\>[label="Algebraische Geometrie", URL="AlgGeo.html"]\\
+\>Homotopietheorie\> [URL="Homotopietheorie.html"]\\
+\>LieAlg \>	[label="Lie Algebren", URL="LieAlg.html"]\\
+\>	AlgGrp\>[label="Algebraische Gruppen", URL="AlgGrp.htlm"]  \\
+\end{tabbing}
+
+\noindent
+Unsere Verlinkungen führen zu weiteren Graphen. Hierbei haben wir farblich markiert, welche Vorlesungen Voraussetzungen sind, und welche Vorlesung auf die gewählte aufbaut. Diese Graphen müssen alle manuell nochmal erstellt und verlinkt werden.
+
+\begin{minipage}{1.2 \textwidth}
+    \includegraphics[width=\textwidth]{KDMOverleafebunt.pdf}
+\end{minipage}
+
+\section{Onlineversion erstellen}
+
+\textbf{Je nach beabsichtigter Verwendung kann es ausreichend sein, statt der Variante mit ".html"- und ".gif"-Dateien nur ".svg"-Dateien zu verwenden. Falls diese Variante gewählt wird, müssen die Links im Code oben und die Vorgehensweise unten angepasst werden.}\\
+Vorgehensweise unter Windows:
+
+\begin{enumerate}
+\item Graph erstellen (siehe oben). Ganz wichtig: Den Namen hinter digraph merken.
+\item In einem Beispielordner als xyz.gv (oder anderer Name, dann zukünftig xyz.gv durch euerName.gv ersetzen) speichern.\\
+z.B. C:\textbackslash Users\textbackslash Benutzer\textbackslash Desktop\textbackslash KdM\textbackslash xyz.gv
+\item Eingabeaufforderung öffnen, z.B. über Windowstaste+R, dann cmd eingeben und Enter drücken
+\item Folgenden Befehl eingeben (den Dateipfad durch den Pfad ersetzen, in dem xyz.gv liegt): cd C:\textbackslash Users\textbackslash Benutzer\textbackslash Desktop\textbackslash KdM
+\item Im Graphviz Ordner das Programm neato.exe (oder jeweilige Layout-Engine) finden und in das Eingabeaufforderungsfenster ziehen. Dort müsste dann der vollständige Pfad von neato.exe erscheinen. Dahinter nach einem Leerzeichen Folgendes eintippen und danach durch Enter abschicken (x ist hierbei im Bestfall der Name, den der Graph hinterher auf dem Webserver haben soll): -T cmapx -o x.map -T gif -o x.gif xyz.gv
+\item In eurem genutzten Ordner müsste nun Dateien x.gif und x.map entstanden sein.
+\item Erstellt mit eurem Texteditor eine HTML-Datei, z.B. x.html
+\item Kopiert in x.html:\\
+$<$IMG SRC="x.gif" USEMAP="\#mainmap" /$>$\\
+Ersetzt dabei mainmap durch den Namen hinter digraph in eurer Karte.
+\item Kopiert den gesamten Inhalt von x.map unter den Befehl aus 8.
+\item Speichert die HTML-Datei und die x.gif im selben Ordner auf dem Webserver
+\item Profit
+\end{enumerate}
+\section{Impressum}
+Dieses How to ist im Rahmen der WachKoMa84 vom 23.-25.08.2019 entstanden.\\
+Die Teilnehmer waren:
+\begin{itemize}
+    \item Hannah Wallböhmer (Ruhr-Uni-Bochum)
+    \item Laurent Smits (Ruhr-Uni-Bochum)
+    \item Stefan Achatz (Uni Augsburg)
+    \item Tamara Linke (TU Kaiserslautern)
+    \item Wolf Kissler (Ruhr-Uni-Bochum)
+\end{itemize}
+Bei Fragen empfiehlt es sich Bochum oder Augsburg zu kontaktieren:
+\begin{itemize}
+    \item Bochum: matheberatung-fachschaft[at]lists.rub.de
+    \item Augsburg: fachschaft[at]math.uni-augsburg.de
+\end{itemize}
+
+\end{document}

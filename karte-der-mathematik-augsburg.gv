@@ -1,0 +1,291 @@
+digraph Vorlesungen{
+        splines="spline"
+        overlap="false"
+        start=35
+        {
+                node [style=filled]
+        }
+        {
+                compound=true;
+                subgraph cluster_algebra{
+                        style=filled;
+                        color=deepskyblue1;
+                        Algebra[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled,URL="Algebra.html"]
+                        {
+                                Algebra1[label="Einführung in die Algebra",URL="Algebra1.html"]
+                                KommutativeAlgebra[label="Kommutative Algebra",URL="KommutativeAlgebra.html"]
+                                EinfAlgGeo[label="Einführung in die Algebraische Geometrie", URL="EinfAlgGeo.html"]
+                        }
+                        {
+                                node [shape=box]
+                                AlgKTheorie[label="Algebraische K-Theorie", URL="AlgKTheorie.html"]
+                                Modellkategorien [URL="Modellkategorien.html"]
+                                EndlicheKoerper[label="Endliche Körper", URL="EndlicheKoerper.html"]
+                                HomologischeAlgebra[label="Homologische Algebra", URL="HomologischeAlgebra.html"]
+                                AlgebraischeZahlentheorie[label="Algebraische Zahlentheorie", URL="AlgebraischeZahlentheorie.html"]
+                                AlgebraischeGeometrie[label="Algebraische Geometrie", URL="AlgebraischeGeometrie.html"]
+                                Schematheorie[URL="Schematheorie.html"]
+                                Kategorientheorie[URL="Kategorientheorie.html"]
+                        }
+                }
+
+                subgraph cluster_geometrie{
+                        style=filled;
+                        color=cyan2;
+                        Geometrie[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled, URL="Geometrie.html"]
+
+                        {
+                                Geometrie1[label="Einführung in die Geometrie", URL="Geometrie1.html"]
+                                Topologie[URL="Topologie.html"]
+                                RiemannscheFlaechen[label="Riemannsche Flächen", URL="RiemannscheFlaechen.html"]
+                        }
+                        {
+                                node [shape=box]
+                                Riemannsche[label="Riemannsche Geometrie", URL="Riemannsche.html"]
+                                SymplektischeGeometrie[label="Symplektische Geometrie", URL="SymplektischeGeometrie.html"]
+                                Differentialtopologie[URL="Differentialtopologie.html"]
+                                Morsehomologie[URL="Morsehomologie.html"]
+                                Algtopo[label="Algebraische Topologie",URL="Algtopo.html"]
+                                HolomorpheKurven[label="Holomorphe Kurven", URL="HolomorpheKurven.html"]
+                                KomplexeGeometrie[label="Komplexe Geometrie", URL="KomplexeGeometrie.html"]
+                        }
+                }
+
+                subgraph cluster_analysis {
+                        style=filled;
+                        color=greenyellow;
+                        Analysis[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled, URL="Analysis.html"]
+
+                        {
+                                Analysis3[label="Analysis 3", URL="Analysis3.html"]
+                                GewoehnlicheDGL[label="Gewöhnliche Differentialgleichungen", URL="GewoehnlicheDGL.html"]
+                                Funktionentheorie[URL="Funktionentheorie.html"]
+                                Funktionalanalysis[URL="Funktionalanalysis.html"]
+                                PartielleDGL[label="Partielle Differentialgleichungen", URL="PartielleDGL.html"]
+                        }
+                        {
+                                node [shape=box]
+                                NichtlineareFunktionalanalysis[label="Nichtlineare Funktionalanalysis", URL="NichtlineareFunktionalanalysis.html"]
+                                DynamischeSysteme[label="Dynamische Systeme", URL="DynamischeSysteme.html"]
+                                Variationsrechnung[URL="Variationsrechnung.html"]
+                                NichtlinearePartielleDGL[label="Nichtlineare partielle Differentialgleichungen", URL="NichtlinearePartielleDGL.html"]
+                        }
+                }
+
+                subgraph cluster_numerik{
+                                    style=filled;
+                                    color=goldenrod1;
+                                    Numerik[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled,URL="Numerik.html"]
+
+                                    {
+                                                Numerik1    [label="Einführung in die Numerik",URL="Numerik1.html"]
+                                                Numerik2    [label="Numerik gewöhnlicher Differentialgleichungen",URL="Numerik2.html"]
+                                  }
+                                    {
+                                                node [shape=box]
+                                                NumerischeVerfahrenzurModellreduktion [label="Modellreduktion", URL="NumerischeVerfahrenzurModellreduktion.html"]
+                                                Numerik3[label="Numerik partieller Differentialgleichungen", URL="Numerik3.html"]
+                                                Multiskalenmethoden [URL="Multiskalenmethoden.html"]
+                                                Kontrolltheorie [URL="Kontrolltheorie.html"]
+                                                MathematischeModellierung[label="Mathematische Modellierung", URL="MathematischeModellierung.html"]
+                                    }
+                        }
+
+                        subgraph cluster_optimierung{
+                                    style=filled;
+                                    color=grey66;
+                                    Optimierung[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled,URL="Optimierung.html"]
+
+                                    {
+                                                Kombinatorik [URL="Kombinatorik.html"]
+                                                Optimierung1[label="Einführung in die lineare Optimierung", URL="Optimierung1.html"]
+                                               Optimierung2[label="Nichtlineare und kombinatorische Optimierung", URL="Optimierung2.html"]
+                                    }
+                            {
+                                                node [shape=box]
+                                                Kodierungstheorie[label="Codierungstheorie", URL="Kodierungtheorie.html"]
+                                                SpieltheorieOpti4[label="Spieltheorie", URL="SpieltheorieOpti4.html"]
+                                                GlobaleOptiOpti4[label="Globale Optimierung", URL="GlobaleOptiOpti4.html"]
+                                                Optimierung3[label="Kombinatorische Optimierung", URL="Optimierung3.html"]
+                                                ParametrischeOptimierung[label="Parametrische Optimierung", URL="ParametrischeOptimierung.html"]
+                                                    Graphentheorie[label="Graphentheorie", URL="Graphentheorie.html"]
+                                    }
+
+                        }
+                       subgraph cluster_stochastik{
+                                    style=filled;
+                                    color=firebrick2;
+                                    Stochastik[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled, URL="Stochastik.html"]
+                                    {
+                                                Stochastik1[label="Einführung in die Stochastik", URL="Stochastik1.html"]
+                                               Statistik[label="Statistik", URL="Statistik.html"]
+                                    }
+                                    {
+                                                node [shape=box]
+                                                Stochastik3[label="Mathematische Statistik", URL="Stochastik3.html"]
+                                                StochP[label="Stochstische Prozesse", URL="StochP.html"]
+                                                Zeitr[label="Zeitreihenanalyse", URL="Zeitr.html"]
+                                                MarkovKetten[label="Markov-Ketten", URL="MarkovKetten.html"]
+                                                GeneralisiertelineareModelle[label="Generalisierte lineare Modelle", URL="GeneralisiertelineareModelle.html"]
+                                                StochastischeEvolutionsGleichungen[label="Stochastische Evolutionsgleichungen", URL="StochastischeEvolutionsGleichungen.html"]
+                                                StochastischeDGL[label="Stochastische Differentialgleichungen", URL="StochastischeDGL.html"]
+                                    }
+                        }
+
+                subgraph cluster_finanz{
+                        style=filled;
+                        color=orange;
+                        //Wirtschaftsmathematik[color="#016461",fontsize=20.0, fontcolor=grey100, style=filled,URL="Wirtschaftsmathematik.html"]
+                        {
+                                DiskreteFinanzmathematik[label="Diskrete Finanzmathematik", URL="DiskreteFinanzmathematik.html"]
+                        }
+                        {
+                                node [shape=box]
+                                QuantitativeMethodendesRisikomanagements[label="Quantitative Methoden des Risikomanagements", URL="QuantitativeMethodendesRisikomanagements.html"]
+                                NumerischeVerfahrenderWirtschaftsmathematik[label="Numerische Optimierungsverfahren der Wirtschaftsmathematik", URL="NumerischeVerfahrenderWirtschaftsmathematik.html"]
+                                ZinsundKreditmodelle[label="Zins- und Kreditmodelle", URL="ZinsundKreditmodelle.html"]
+                                NumVerfFinanz[label="Numerische Verfahren der Finanzmathematik", URL="NumVerfFinanz.html"]
+                                Finanzopt[label="Financial Optimization", URL="Finanzopt.html"]
+                        }
+                }
+        }
+
+
+        {
+                node [shape=box]
+                
+        }
+
+        Algebra1 -> KommutativeAlgebra;
+        Algebra1 -> Kodierungstheorie;
+        Algebra1 -> EndlicheKoerper;
+        Algebra1 -> Kombinatorik[style=dashed];
+        Algebra1 -> Graphentheorie[style=dashed];
+        Algebra1 -> EinfAlgGeo;
+        EinfAlgGeo -> AlgebraischeGeometrie;
+        EinfAlgGeo -> KommutativeAlgebra[style=dashed, arrowhead=none];
+        EinfAlgGeo -> Schematheorie;
+        KommutativeAlgebra -> AlgebraischeZahlentheorie;
+        KommutativeAlgebra -> AlgebraischeGeometrie[style=dashed];
+        KommutativeAlgebra -> HomologischeAlgebra;
+        KommutativeAlgebra -> Schematheorie;
+        AlgebraischeGeometrie -> Schematheorie[style=dashed, arrowhead=none];
+        AlgebraischeGeometrie -> AlgKTheorie[style=dashed];
+        AlgebraischeGeometrie -> AlgebraischeZahlentheorie[style=dashed,arrowhead=none];
+        AlgebraischeGeometrie -> KomplexeGeometrie[style=dashed,arrowhead=none];
+        HomologischeAlgebra -> Modellkategorien[style=dashed];
+        HomologischeAlgebra -> KomplexeGeometrie[style=dashed,arrowhead=none];
+        HomologischeAlgebra -> AlgebraischeZahlentheorie[style=dashed,arrowhead=none];
+        HomologischeAlgebra -> AlgebraischeGeometrie[style=dashed,arrowhead=none];
+        HomologischeAlgebra -> Algtopo[style=dashed,arrowhead=none];
+        HomologischeAlgebra -> Topologie[style=dashed,arrowhead=none];
+        EndlicheKoerper -> Kodierungstheorie[style=dashed];
+        Kategorientheorie -> Algtopo[style=dashed, arrowhead=none];
+        Kategorientheorie -> Modellkategorien[style=dashed];
+        Kategorientheorie -> Schematheorie[style=dashed,arrowhead=none];
+
+        Geometrie1 -> Riemannsche;
+        Geometrie1 -> SymplektischeGeometrie[style=dashed];
+        Geometrie1 -> Differentialtopologie[style=dashed];
+        Topologie -> Differentialtopologie;
+        Topologie -> Algtopo;
+        Differentialtopologie -> Morsehomologie;
+        Differentialtopologie -> Algtopo[style=dashed,arrowhead=none];
+        SymplektischeGeometrie -> HolomorpheKurven
+        Algtopo -> AlgKTheorie[style=dashed];
+        Algtopo -> Modellkategorien[style=dashed];
+        RiemannscheFlaechen -> KomplexeGeometrie[style=dashed];
+        RiemannscheFlaechen -> AlgebraischeGeometrie[style=dashed];
+        RiemannscheFlaechen -> HolomorpheKurven[style=dashed,arrowhead=none];
+        KomplexeGeometrie -> Riemannsche[style=dashed,arrowhead=none];
+        KomplexeGeometrie -> Differentialtopologie[style=dashed,arrowhead=none];
+
+        Funktionentheorie -> RiemannscheFlaechen;
+        Funktionentheorie -> KomplexeGeometrie;
+        Funktionentheorie -> Topologie[style=dashed,arrowhead=none];
+        Analysis3 -> SymplektischeGeometrie[style=dashed];
+        Analysis3 -> Differentialtopologie[style=dashed];
+        Analysis3 -> MathematischeModellierung;
+        Analysis3 -> Variationsrechnung;
+        Analysis3 -> Funktionalanalysis[style=dashed];
+        Analysis3 -> NichtlinearePartielleDGL;
+        GewoehnlicheDGL -> DynamischeSysteme[style=dashed];
+        GewoehnlicheDGL -> Numerik2[style=dashed];
+        GewoehnlicheDGL -> StochastischeDGL[style=dashed];
+        GewoehnlicheDGL -> Kontrolltheorie[style=dashed];
+        Funktionalanalysis -> NichtlineareFunktionalanalysis;
+        Funktionalanalysis -> PartielleDGL;
+        Funktionalanalysis -> ParametrischeOptimierung[style=dashed];
+        Funktionalanalysis -> Variationsrechnung;
+        Funktionalanalysis -> StochastischeEvolutionsGleichungen;
+        Funktionalanalysis -> Numerik3;
+        Funktionalanalysis -> NichtlinearePartielleDGL[style=dashed];
+        Funktionalanalysis -> MathematischeModellierung[style=dashed];
+        Funktionalanalysis -> DynamischeSysteme[style=dashed];
+        PartielleDGL -> NichtlinearePartielleDGL;
+        PartielleDGL -> Numerik3[style=dashed];
+        PartielleDGL -> MathematischeModellierung[style=dashed];
+        PartielleDGL -> DynamischeSysteme[style=dashed];
+        PartielleDGL -> KomplexeGeometrie[style=dashed];
+
+        Numerik1 -> Numerik2;
+        Numerik1 -> NumVerfFinanz;
+        Numerik2 -> Numerik3;
+        Numerik2 -> Kontrolltheorie;
+        Numerik2 -> NumerischeVerfahrenzurModellreduktion;
+        Numerik3 -> Multiskalenmethoden;
+        Numerik3 -> MathematischeModellierung[style=dashed,arrowhead=none];
+        Numerik3 -> NumVerfFinanz[style=dashed];
+
+        Kombinatorik -> Kodierungstheorie;
+        Kombinatorik -> EndlicheKoerper[style=dashed];
+        Kombinatorik -> Graphentheorie[style=dashed];
+        Optimierung1 -> Optimierung2;
+        Optimierung1 -> DiskreteFinanzmathematik;
+        Optimierung2 -> Optimierung3;
+        Optimierung2 -> ParametrischeOptimierung;
+        Optimierung2 -> GlobaleOptiOpti4;
+        Optimierung2 -> Finanzopt;
+        Optimierung3 -> SpieltheorieOpti4;
+        Optimierung3 -> Graphentheorie[style=dashed, arrowhead=none];
+
+        Stochastik1 -> DiskreteFinanzmathematik;
+        Stochastik1 -> Statistik;
+        Stochastik1 -> StochastischeDGL;
+        Stochastik1 -> StochastischeEvolutionsGleichungen;
+        Stochastik1 -> Finanzopt;
+        Statistik -> Stochastik3;
+        Statistik -> MarkovKetten;
+        Statistik -> StochP;
+        Statistik -> Zeitr;
+        Statistik -> GeneralisiertelineareModelle;
+        Stochastik3 -> MarkovKetten[style=dashed,arrowhead=none];
+        StochastischeDGL -> NumVerfFinanz[style=dashed];
+        StochP -> NumVerfFinanz[style=dashed];
+        StochP ->  StochastischeDGL[style=dashed];
+        StochP -> StochastischeEvolutionsGleichungen[style=dashed];
+
+        DiskreteFinanzmathematik -> QuantitativeMethodendesRisikomanagements[style=dashed];
+        DiskreteFinanzmathematik -> NumVerfFinanz[style=dashed];
+        DiskreteFinanzmathematik -> ZinsundKreditmodelle;
+        NumerischeVerfahrenderWirtschaftsmathematik -> ParametrischeOptimierung[style=dashed];
+        NumVerfFinanz -> ZinsundKreditmodelle;
+    
+        Algebra -> Algebra1[arrowhead=none];
+        Algebra -> Funktionentheorie[arrowhead=none];
+        Geometrie -> Geometrie1[arrowhead=none];
+        Geometrie -> Topologie[arrowhead=none];
+        Geometrie -> DynamischeSysteme[arrowhead=none];
+        Analysis -> Analysis3[arrowhead=none];
+        Analysis -> Funktionalanalysis[arrowhead=none];
+        Analysis -> GewoehnlicheDGL[arrowhead=none];
+        Analysis -> Funktionentheorie[arrowhead=none];
+        Numerik -> Numerik1[arrowhead=none];
+        Numerik -> NumerischeVerfahrenderWirtschaftsmathematik[arrowhead=none];
+        Numerik -> NumVerfFinanz[arrowhead=none];
+        Optimierung -> Optimierung1[arrowhead=none];
+        Optimierung -> Kombinatorik[arrowhead=none];
+        Stochastik -> Stochastik1[arrowhead=none];
+        //Wirtschaftsmathematik -> DiskreteFinanzmathematik[arrowhead=none];
+
+}
